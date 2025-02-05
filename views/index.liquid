@@ -1,26 +1,36 @@
 {% render 'partials/head.liquid' %}
 
-<article>
-  <section> 
-    <header>
-      <img src="mugshot-jaar-1.png" alt="Mugshot van Kyan Gijtenbeek" width="150" height="225"/>
-        <h1>{{ person.name }}</h1>
-          <h2> Skills </h2>
-            <p id="three"> HTML &ensp; CSS &ensp; JAVA
-            <p id="four"> &ensp;[ * ] &nbsp;&emsp; [ * ] &ensp; [ * ]</p>
-    </header>
-  </section>
+<section class="front-profile-card">
+    <div>
+        <div>
+            <div>
+                <h1> {{ person.name }}</h1>
+                <h3> {{ person.custom.subkop }}</h3>
+                <img src="https://avatars.githubusercontent.com/u/180160101?v=4" alt="picture of me"> 
+            </div>
+        </div>
+    </div>
+</section>
 
-  <section>
-    <h3>Wie ben ik?</h3>
-    <p id="one">ik ben Kyan Gijtenbeek, ik ben 21 jaar oud en ik woon in Amersfoort. Ik heb hiervoor Grafisch design gestudeerd op het ROC Midden Nederland.</p>
-    <h4>Wat wil ik bereiken?</h4>
-    <p id="two">Ik wil later graag mijn eigen bedrijf in de creatieve markt, daar wil ik graag werken met huisstijlen en met de bouw van websites.</p>  
-    <svg width="120" height="20"></svg>
-    <a href="https://www.linkedin.com/in/kyan-gijtenbeek-7063791a7/">
-        <button style="font-size: large; width: 200px;">Contact</button>
-    </a>
-  </section>
-</article>
+<section class="back-profile-card">
+  <div>
+    <div>
+      <div>
+        <h2> {{ person.custom.info-one }}</h2>
+        <p> {{ person.custom.info-sec-one }}</p>
+      </div>
+    </div>
+  </div>
+
+  <div>
+    <div>
+      <div>
+        <h2> {{ person.custom.info-two }}</h2>
+        <p> mail: {{ person.custom.info-sec-mail }}</p>
+        <p> tel: {{ person.custom.info-sec-mobile }}</p>
+      </div>
+    </div>
+  </div>
+</section>
 
 {% render 'partials/foot.liquid' %}
