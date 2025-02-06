@@ -1,36 +1,41 @@
 {% render 'partials/head.liquid' %}
-
-<section class="front-profile-card">
-    <div>
-        <div>
-            <div>
-                <h1> {{ person.name }}</h1>
-                <h3> {{ person.custom.subkop }}</h3>
-                <img src="https://avatars.githubusercontent.com/u/180160101?v=4" alt="picture of me"> 
+<section class="container">
+  <section class="card">
+    <section class="front-profile-card">
+        <div class="outline-front-one">
+            <div class="outline-front-two">
+                <div class="outline-front-three">
+                    <h1> {{ person.name }}</h1>
+                    <h3> {{ person.custom.subkop }}</h3>
+                    <img src="https://avatars.githubusercontent.com/u/180160101?v=4" alt="picture of me"> 
+                </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<section class="back-profile-card">
-  <div>
-    <div>
-      <div>
-        <h2> {{ person.custom.info-one }}</h2>
-        <p> {{ person.custom.info-sec-one }}</p>
+    <section class="back-profile-card">
+      <div class="outline-back-oneleft left">
+        <div class="outline-back-twoleft left">
+          <div class="outline-back-threeleft left">
+            <h2> {{ person.custom.info-one }}</h2>
+            <p> {{ person.custom.info-sec-one }}</p>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
 
-  <div>
-    <div>
-      <div>
-        <h2> {{ person.custom.info-two }}</h2>
-        <p> mail: {{ person.custom.info-sec-mail }}</p>
-        <p> tel: {{ person.custom.info-sec-mobile }}</p>
+      <div class="outline-back-oneright right">
+        <div class="outline-back-tworight right">
+          <div class="outline-back-threeright right">
+            <h2> {{ person.custom.info-two }}</h2>
+            <div class="informatie">
+              <p> mail: {{ person.custom.info-sec-mail }}</p>
+              <p> tel: {{ person.custom.info-sec-mobile }}</p>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
+    </section>
+  </section>
 </section>
 
 {% render 'partials/foot.liquid' %}
